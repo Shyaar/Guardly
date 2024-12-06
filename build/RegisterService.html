@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="place-items-center flex-col my-[20px] mx-[90px]">
+    <div class="regFrame w-full">
+        <div id="back">
+         <img src="/assets/svg_icons/mingcute_back-fill back.svg" alt=""><span>Back</span>
+        </div>
+    </div>
+
+    <div class="formContainer w-4/12 place-content-center h-screen ">
+        <div id="regInput" class="flex justify-between w-full place-content-center ">
+        <div class="flex justify-between w-full self-center mx-auto items-center">
+            <div id="textframe">
+                <h3 class="font-bold ">Register emergency number</h3>
+                <p>Please enter details</p>
+            </div>
+            <div class="" id="logo">
+                <img style="width: 85px;" src="/assets/img/Frame 21.png" alt="logo">
+                <h3 class="text-center">Guardly</h3>
+            </div>
+        </div>
+        </div> 
+    
+    <div class="form flex flex-col w-full gap-3 items-center">
+        
+        <label class="w-full" for="Parastatal">Parastatal</label>
+        <select class="RegServiceSelect px-4 py-2 border-[2px] rounded-[12px] w-full" name="Parastatal" id="">
+             <option value="" disabled selected>Select a Parastatal</option>
+            <option value="Police">Police</option>
+            <option value="Road Safety">Road Safety</option>
+            <option value="Fire Service">Fire Service</option>
+        </select>
+
+        <label class="w-full" for="Address">Address</label>
+        <input class="RegAddress px-4 py-2 border-[2px] rounded-[12px] w-full" type="text">
+
+        <!-- <label class="w-full" for="Address">Address</label>
+        <input class=" px-4 py-2 border-[2px] rounded-[12px] w-full" type="text"> -->
+
+        <label class="w-full" for="Address">Phone Number</label>
+        <input class="RegPhone px-4 py-2 border-[2px] rounded-[12px] w-full" type="number">
+    </div>
+
+    <div>
+        <button class="RegAddNo text-[#B70612] my-[24px] flex gap-1 w-full place-content-center">Add number <img src="/assets/svg_icons/mynaui_plus-solid.svg" alt=""></button>
+
+        <button type="submit" class="regBtn bg-[#B70612] text-white px-4 py-[8px] w-full text-[15px] rounded-lg text-center">Register</button>
+    </div>
+
+    
+    </div>
+
+    <script src="/build/script.js"></script>
+</body>
+</html>

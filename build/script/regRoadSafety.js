@@ -1,5 +1,5 @@
-console.log("we dey here")
-// police registered numbers page
+console.log("we dey now")
+// Fire-service registered numbers page
 const json = localStorage.getItem('fD')
 console.log(json)
 const contact = JSON.parse(json)
@@ -9,15 +9,15 @@ console.log(contact)
 contactCard = []
 
 for(let i=0; i<contact.length; i++){
-    if(contact[i].service === 'Police'){
+    if(contact[i].service === 'Road Safety'){
         console.log(contact[i],"found")
         contactCard.push(contact[i])
     }else{
         console.log('not found')
     }
 }
-const policeCard = document.querySelector("#contactCards")
-console.log(policeCard)
+const roadSafety = document.querySelector("#contactCards")
+console.log(roadSafety)
 for(let i =0; i<contactCard.length; i++){
     const address = contactCard[i].address
     const phone1 = contactCard[i].phone1
@@ -26,7 +26,7 @@ for(let i =0; i<contactCard.length; i++){
     console.log(phone1)
     console.log(phone2)
 
-    policeCard.insertAdjacentHTML(
+    roadSafety.insertAdjacentHTML(
         "afterbegin",
         `<div class="flex">
             <address class="w-full">

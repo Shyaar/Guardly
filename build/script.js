@@ -111,20 +111,3 @@
     );
     });
 }
-
-
-//Sendi call button function
-
-document.addEventListener(`DOMContenLoaded`, function() {
-    const callButtons = document.querySelectorAll(`.call-btn`);
-
-    callButtons.forEach(button => {
-        button.addEventListener(`click`, function() {
-            const phoneNumber = button.getAttribute(`data-phone`)
-
-            window.location.href = `tel:${phoneNumber}`;
-        });
-    });
-}) 
-
-

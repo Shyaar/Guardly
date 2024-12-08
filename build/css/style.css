@@ -947,11 +947,6 @@ h3 {
   margin: 16px;
 }
 
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
 .mx-24 {
   margin-left: 6rem;
   margin-right: 6rem;
@@ -1000,11 +995,6 @@ h3 {
 .my-\[40px\] {
   margin-top: 40px;
   margin-bottom: 40px;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
 }
 
 .mb-3 {
@@ -1059,16 +1049,8 @@ h3 {
   height: 100vh;
 }
 
-.w-1\/4 {
-  width: 25%;
-}
-
 .w-10\/12 {
   width: 83.333333%;
-}
-
-.w-3\/4 {
-  width: 75%;
 }
 
 .w-4\/12 {
@@ -1215,12 +1197,12 @@ h3 {
   background-image: none;
 }
 
-.p-\[12px\] {
-  padding: 12px;
-}
-
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-\[12px\] {
+  padding: 12px;
 }
 
 .px-4 {
@@ -1258,20 +1240,12 @@ h3 {
   padding-bottom: 8px;
 }
 
-.pt-2 {
-  padding-top: 0.5rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
-}
-
 .pl-3 {
   padding-left: 0.75rem;
 }
 
-.text-left {
-  text-align: left;
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .text-center {

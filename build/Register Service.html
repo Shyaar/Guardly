@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardly</title>
+    <title>Register contact</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="place-items-center flex-col my-[20px] mx-[90px]">
@@ -36,20 +36,24 @@
             <option value="Road Safety">Road Safety</option>
             <option value="Fire Service">Fire Service</option>
         </select>
+        <p class="ParasError px-4 py-1 text-red-700 border rounded-md w-full my-[-10px] mb-3 border-red-500 bg-red-300">Please Select a Parastatal</p>
 
         <label class="w-full" for="Address">Address</label>
         <input class="RegAddress px-4 py-2 border-[2px] rounded-[12px] w-full" type="text">
+        <p class="addError px-4 py-1 text-red-700 border rounded-md w-full my-[-10px] mb-3 border-red-500 bg-red-300">"Please fill-in Address"</p>
 
-        <!-- <label class="w-full" for="Address">Address</label>
-        <input class=" px-4 py-2 border-[2px] rounded-[12px] w-full" type="text"> -->
-
-        <label class="w-full" for="Address">Phone Number</label>
+        <label class="w-full" for="Phone">Phone Number 1</label>
         <input class="RegPhone px-4 py-2 border-[2px] rounded-[12px] w-full" type="number">
+        <p class="PhoneError px-4 py-1 text-red-700 border rounded-md w-full my-[-10px] mb-3 border-red-500 bg-red-300">"INVALID NUMBER!!! Phone number MUST be 11 digits. PLEASE CHECK NUMBER!!"</p>
+        
+
+        <label class="w-full" for="Phone">Phone Number 2</label>
+        <input class="RegPhone px-4 py-2 border-[2px] rounded-[12px] w-full appearance-none -moz-appearance-textfield" type="number">
+        <p class="PhoneError px-4 py-1 text-red-700 border rounded-md w-full my-[-10px] mb-3 border-red-500 bg-red-300">"INVALID NUMBER!!! Phone number MUST be 11 digits. PLEASE CHECK NUMBER!!"</p>
+        
     </div>
 
-    <div>
-        <button class="RegAddNo text-[#B70612] my-[24px] flex gap-1 w-full place-content-center">Add number <img src="/assets/svg_icons/mynaui_plus-solid.svg" alt=""></button>
-
+    <div class="mt-7">
         <button type="submit" class="regBtn bg-[#B70612] text-white px-4 py-[8px] w-full text-[15px] rounded-lg text-center">Register</button>
     </div>
 

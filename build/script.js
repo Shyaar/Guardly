@@ -1,53 +1,113 @@
-//Registration page script
+// Registration page script
 {
-const regBtn = document.querySelector(".regBtn");
-const regSS = document.querySelector(".RegServiceSelect");
-const regAdd = document.querySelector(".RegAddress");
-const regPhone = document.querySelector(".RegPhone")
-const regAddNo = document.querySelector(".RegAddNo")
-const form = document.querySelector(".form")
+    const regBtn = document.querySelector(".regBtn");
+    const regSS = document.querySelector(".RegServiceSelect");
+    const ParasError = document.querySelector(".ParasError");
+    const regAdd = document.querySelector(".RegAddress");
+    const addError = document.querySelector(".addError");
+    const regPhone = document.querySelectorAll(".RegPhone");
+    const phoneError = document.querySelectorAll(".PhoneError");
+    const form = document.querySelector(".form");
 
+    // Hide error messages initially
+    ParasError.style.display = "none";
+    addError.style.display = "none";
+    phoneError.forEach((phoneError) => {
+        phoneError.style.display = "none";
+    });
 
-//Event Listeners
+    // Check if the form is empty
+    function emptyForm() {
+        let isEmpty = false;
 
-regBtn.addEventListener("click",()=>{
-    if(regSS.value = "Police"){
+        if (regSS.value === "") {
+            isEmpty = true;
+            ParasError.style.display = "block";
+        } else {
+            ParasError.style.display = "none";
+        }
 
-    }else if(regSS.value = "Road Safety"){
-        window.localStorage.href = 'landing.html'
+        if (regAdd.value === "") {
+            isEmpty = true;
+            addError.style.display = "block";
+        } else {
+            addError.style.display = "none";
+        }
 
-    }else if(regSS.value = "Fire Service"){
-        
+        regPhone.forEach((phoneInput, index) => {
+            if (phoneInput.value === "" || phoneInput.value.length !== 11) {
+                isEmpty = true;
+                phoneError[index].style.display = "block";
+            } else {
+                phoneError[index].style.display = "none";
+            }
+        });
+
+        return isEmpty; // Return true if any field is invalid
     }
-})
 
-regSS.addEventListener("input",()=>{
-    console.log(regSS.value)
-})
+    // Event Listeners
+    regBtn.addEventListener("click", (event) => {
+        if (emptyForm()) {
+            event.preventDefault(); // Prevent submission if the form is invalid
+            alert("Please fill in all required fields.");
+        } else {
+            // Create object from input
+            const phone1 = regPhone[0]?.value || "";
+            const phone2 = regPhone[1]?.value || "";
+            const fD = [{
+                service: regSS.value,
+                address: regAdd.value,
+                phone1: phone1,
+                phone2: phone2,
+            }];
 
-regAdd.addEventListener("input",()=>{
-    console.log(regAdd.value)
-})
+            // Save fD to local storage
+            localStorage.setItem('fD', JSON.stringify(fD));
+            const storedCC = localStorage.getItem('fD')
+            console.log(storedCC)
+            const contactCard = JSON.parse(storedCC)
+            // console.log(contactCard)
+            // return
 
-regPhone.addEventListener("input",()=>{
-    phone = regPhone.value
-    console.log(regPhone.value)
+            // Redirect based on selected service
+            if (regSS.value === "Police") {
+                window.location.href = 'Police.html'; 
+                console.log(contactCard)    
+            } else if (regSS.value === "Road Safety") {
+                window.location.href = 'Fire_service.html';
+            } else if (regSS.value === "Fire Service") {
+                window.location.href = 'FIRS_page.html';
+            }
+        }
+    });
 
-    if(phone.length > 10){
-        alert("Phone number cannot exceed 10 degits. PLEASE CHECK NUMBER!!")
-    }
-})
+    // Individual field validation
+    regSS.addEventListener("blur", () => {
+        if (regSS.value === "") {
+            ParasError.style.display = "block"; 
+        } else {
+            ParasError.style.display = "none";
+        }
+    });
 
-regAddNo.addEventListener("click", () => {
-    form.insertAdjacentHTML('beforeend', `
-        <label class="w-full" for="Address">Phone Number</label>
-        <input class="RegPhone px-4 py-2 border-[2px] rounded-[12px] w-full" type="number">
-    `);
-});
+    regAdd.addEventListener("blur", () => {
+        if (regAdd.value === "") {
+            addError.style.display = "block"; 
+        } else {
+            addError.style.display = "none";
+        }
+    });
+
+    regPhone.forEach((phoneInput, index) => {
+        phoneInput.addEventListener("blur", () => {
+            const phone = phoneInput.value;
+            if (phone === "" || phone.length !== 11) {
+                phoneError[index].style.display = "block";
+            } else {
+                phoneError[index].style.display = "none";
+            }
+        }
+    );
+    });
 }
-
-//Landing page
-{
-
-}
-

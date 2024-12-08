@@ -1,5 +1,4 @@
 // Registration page script
-{
     const regBtn = document.querySelector(".regBtn");
     const regSS = document.querySelector(".RegServiceSelect");
     const ParasError = document.querySelector(".ParasError");
@@ -43,42 +42,48 @@
             }
         });
 
-        return isEmpty; // Return true if any field is invalid
+        return isEmpty;
     }
 
     // Event Listeners
     regBtn.addEventListener("click", (event) => {
         if (emptyForm()) {
-            event.preventDefault(); // Prevent submission if the form is invalid
+            event.preventDefault(); 
             alert("Please fill in all required fields.");
         } else {
-            // Create object from input
-            const phone1 = regPhone[0]?.value || "";
-            const phone2 = regPhone[1]?.value || "";
-            const fD = [{
-                service: regSS.value,
-                address: regAdd.value,
-                phone1: phone1,
-                phone2: phone2,
-            }];
+    // Create object from input
+    const phone1 = regPhone[0]?.value || "";
+    const phone2 = regPhone[1]?.value || "";
+    const fD = {
+    service: regSS.value,
+    address: regAdd.value,
+    phone1: phone1,
+    phone2: phone2,
+};
 
-            // Save fD to local storage
-            localStorage.setItem('fD', JSON.stringify(fD));
-            const storedCC = localStorage.getItem('fD')
-            console.log(storedCC)
-            const contactCard = JSON.parse(storedCC)
-            // console.log(contactCard)
-            // return
+// Get existing data from localStorage
+let existingFD = JSON.parse(localStorage.getItem('fD')) || [];
 
-            // Redirect based on selected service
-            if (regSS.value === "Police") {
-                window.location.href = 'Police.html'; 
-                console.log(contactCard)    
-            } else if (regSS.value === "Road Safety") {
-                window.location.href = 'Fire_service.html';
-            } else if (regSS.value === "Fire Service") {
-                window.location.href = 'FIRS_page.html';
-            }
+existingFD.push(fD);
+localStorage.setItem('fD', JSON.stringify(existingFD));
+
+// Get the stored data
+const json = localStorage.getItem('fD');
+console.log(json);
+const storedData = JSON.parse(json);
+console.log(storedData);
+
+// Redirect based on the selected service
+if (regSS.value === "Police") {
+    window.location.href = 'Reg Num Police.html';  
+    console.log(regSS);
+} else if (regSS.value === "Road Safety") {
+    window.location.href = 'Reg Num Road safety.html';
+    console.log('Road Safety:');
+} else if (regSS.value === "Fire Service") {
+    window.location.href = 'Reg Num fire Service.html';
+    console.log('Fire Service:');
+}
         }
     });
 
@@ -110,4 +115,5 @@
         }
     );
     });
-}
+
+

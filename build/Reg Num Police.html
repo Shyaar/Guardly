@@ -3,58 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Police</title>
+    <title>Registered Police Numbers</title>
     <link rel="stylesheet" href="/build/css/style.css">
 </head>
 <body>
-    <div class="flex flex-col frsc-container items-center">
+    <div class="flex flex-col frsc-container items-center w-full">
         <div class="closet-bar">
-            <img src="/build/images/image (1).png" alt="" height="100"> <span>Closet to your Address</span>
+            <img src="/build/images/image (1).png" alt="" height="100"> 
+            <div class="w-full">
+            <h1 class="w-full font-bold text-32px p-3 my-1">Nigeria Police Force</h1>
+            <h1 class="w-full pl-3">Nigeria Police Force</h1>
+            </div>
         </div>
 
-        <h5>Registered Police Sations and Numbers</h5>
+        <h1 style="font-weight: bold;">Registered Police Sations and Numbers</h1>
 
-    <div class="category">
-        <div>
-            <address>
-             Address 1: Zaria road jos. <br>
-            Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button><br>
-            Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
+        <div id="contactCards" class="category">
+        <div class="flex">
+            <address class="w-full">
+                Address: ${address} <br>
+                Phone 1: ${phone1} 
+                <button style="margin-left: 10px;">
+                    <img src="/build/images/Vector.png" alt="">
+                </button><br>
+                Phone 2: ${phone2} 
+                <button style="margin-left: 10px;">
+                    <img src="/build/images/Vector.png" alt="">
+                </button>
             </address>
-        </div>
-        <div>
+            <section class="flex flex-col items-center place-content-center ml-6">
+                <button class="Edtbtn bg-blue-700 border border-blue-600 px-4 py-1 text-white my-1 w-full rounded-md">Edit</button>
+                <button class="Delbtn bg-red-700 border border-red-600 px-4 py-1 text-white my-1 rounded-md">Delete</button>
+            </section>
+        </div>`
+            
+
+            <!-- <div>
             <address>
                 Address 1: Zaria road jos. <br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button><br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
-               </address>
-        </div>
-        <div>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button><br>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
+                </address>
+            </div>
+
+            <div>
             <address>
                 Address 1: Zaria road jos. <br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button><br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
-               </address>
-        </div>
-        <div>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button><br>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
+                </address>
+            </div>
+
+            <div>
             <address>
                 Address 1: Zaria road jos. <br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button><br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
-               </address>
-        </div>
-        <div>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button><br>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
+                </address>
+            </div>
+
+            <div>
             <address>
                 Address 1: Zaria road jos. <br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""> </button><br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
-               </address>
-        </div>
-        <div>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""> </button><br>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
+                </address>
+            </div>
+
+            <div>
             <address>
                 Address 1: Zaria road jos. <br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button><br>
-               Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
-               </address>
-        </div>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button><br>
+                Phone 1: 234 645 7464 9484 <button style="margin-left: 10px;"><img src="/build/images/Vector.png" alt=""></button>
+                </address>
+            </div> -->
+
     </div>
+    <script src="/build/script/regPolice.js"></script>
+</body>
+</html>

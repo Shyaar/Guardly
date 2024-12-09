@@ -7,6 +7,7 @@
     const regPhone = document.querySelectorAll(".RegPhone");
     const phoneError = document.querySelectorAll(".PhoneError");
     const form = document.querySelector(".form");
+    
 
     // Hide error messages initially
     ParasError.style.display = "none";

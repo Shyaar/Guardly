@@ -34,11 +34,11 @@ for(let i =0; i<contactCard.length; i++){
                 <br>
                 Phone 1: ${phone1} 
                 <button style="margin-left: 10px;">
-                    <img src="/build/images/Vector.png" alt="">
+                     <a href="tel:+${phone1}"><img src="/build/images/Vector.png"></a>
                 </button><br>
                 Phone 2: ${phone2} 
                 <button style="margin-left: 10px;">
-                    <img src="/build/images/Vector.png" alt="">
+                     <a href="tel:+${phone2}"><img src="/build/images/Vector.png"></a>
                 </button>
             </address>
             <section class="flex flex-col items-center place-content-center">

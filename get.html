@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+<div class="sm:w-full">
 <nav class="bg-red-800">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -45,7 +46,7 @@
  
   
      <!--Alert section-->
-     <div class="flex">
+     <div class="flex sm:flex-col-4">
     <div class="grid grid-cols-[1fr_1fr_auto] gap-4 p-4  ml-[5px]">
    
     <div class="h-[400px] w-[300px] bg-white rounded-[15px] shadow-[0_4px_6px_rgba(64,64,64,0.6)]  p-[20px] ml-[20px] mt-[40px] md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-10 md:border-0  "> 
@@ -99,39 +100,33 @@
   
   
     <!--alert-->
-    <div class=" w-[500px] mt-[40px] ml-[50px]  p-5 py-14 rounded-[15px] shadow-[0_4px_6px_rgba(64,64,64,0.6)]">   
+    <div class="sm:flex-col sm:w-[400px] mt-[40px] ml-[150px]  p-5 py-14 rounded-[15px] shadow-[0_4px_6px_rgba(64,64,64,0.6)]">   
         <h2 class="text-2xl font-serif text-center mb-[20px] text-red-500">Alert Report</h2>
         <div class="flex flex-row gap-4">
           <div class="rounded-full w-8 h-8 flex items-center justify-center mr-4">
           </div>
-          <div class="flex sm:flex-wrap">
           <div>
             <img class="w-[40px] h-[40px]" src="/guardly/assets/img/Untitled/Frame 17 (1).png" alt="">
             <p class="grid sm:grid-cols-1">Lorem ipsum dolor sit amet consectetur. Augue volutpat amet ullamcorper mi odio. Diam quam tristique nullam consequat placerat pellentesque id. Quisque consectetur est nunc porttitor ultrices. Laculis fermentum ac praesent adipiscing commodo ac feugiat sed.</p>
           </div>
           <div>
-            <img class="w-[40px] h-[40px]" src="/guardly/assets/img/Untitled/Frame 17 (1).png" alt="">
-            <p class="grid sm:grid-cols-1">Lorem ipsum dolor sit amet consectetur. Augue volutpat amet ullamcorper mi odio. Diam quam tristique nullam consequat placerat pellentesque id. Quisque consectetur est nunc porttitor ultrices. Laculis fermentum ac praesent adipiscing commodo ac feugiat sed.</p>
-          </div>
-        </div>
-        </div>
-        <div class="flex mt-4">
-          <!--<button class="bg-red-500  text-white font-bold py-2 px-4 rounded">Share Emergency Alert!</button>-->
-          <input type="text" class="border border-gray-300 p-10  rounded-[10px] w-full" id="messagesInput" placeholder="Type an emergency report">
-        </div>
-
-        <div class="flex mt-4">
-          <button class="bg-red-500  text-white font-bold py-2 px-4 rounded" id="sendButton">Share Emergency Alert!</button>
-          <!--<input type="text" class="border border-gray-300 p-2 rounded w-full" placeholder="Type an emergency report">-->
-        </div>
-        <div id="messagesList">
-         
-      </div>
     </div>
+        </div>
+        
+          
+        <select class="input2" name="question" id="question">
+          <option class="font-serif" value="q1">Police</option>
+          <option class="font-serif" value="q2">Fire Service</option>
+          <option class="font-serif" value="q2">Fire Service</option>
+          <option class="font-serif" value="q3">Road Safety</option>
+          <option class="font-serif" value="q4">My community</option>
+      </select>
+      <p class="font-serif text-red-500">Select an option</p>
 
     <script src="index.js"></script>
     
 </body>
 </html>
+
 
   

@@ -8,12 +8,46 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"></script>
 </head>
 <body>
+    <nav class="bg-red-800">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/assets/img/image 10.png"  class="h-8 rounded-[15px]" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Guardly</span>
+      </a>
+      
+      <!--button-->
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+
+      <!--navbar-->
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100  bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  bg-red-800 dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white " aria-current="page">Mobile Police</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-white text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Road Safety</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-white text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Fire Service</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-white text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">My community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <div class="px-[16px] sm:px-[24px] flex flex-col items-center  place-content-center">
 
         <!-- Hero Area -->
-        <div class="hero flex flex-col-reverse bg-none sm:flex-row gap-[100px] items-center place-content-center lg:items-center mx-24 relative lg:gap-[30px] ">
-            <div class="sm:flex flex-col items-center w-4/4 lg:w-5/12">
-                <img class="sm:h-[250px] lg:h-[350px] mb-9" src="/assets/img/Untitled/image 10.png" alt="">
+        <div class="w-full hero flex flex-col-reverse bg-none md:flex-row gap-[60px] items-center place-content-center lg:items-center mx-24 relative lg:gap-[30px] ">
+            <div class="w-full flex flex-col items-center lg:w-5/12">
+                <img class="sm:h-[250px] lg:h-[350px] mb-9" src="/assets/img/image 10.png" alt="">
                 <h3 class="sm:text-center text-[15px] lg:mb-3 xl:text-[20px]">
                     Send instant SOS alerts to emergency<br> services with just a tap. Your Safety<br> simplified
                 </h3>
@@ -24,8 +58,8 @@
                 </div>
             </div>
 
-            <div class="lg:w-6/12 h-[600px]">
-                <div class="flex flex-col items-center w-4/4 h-full border border-[#c0c0c0] bg-white rounded-[15px] shadow-md py-[20px] p-[12px] lg:w-full place-content-center ">  
+            <div class="w-full md:w-full lg:w-6/12 h-[600px]">
+                <div class="flex flex-col items-center w-4/4 h-full border-[#c0c0c0] bg-white rounded-[15px] shadow-md py-[20px] p-[12px] md:w-full lg:w-full place-content-center ">  
                     <h3 class="text-lg text-black text-center font-serif m-[16px] lg:text-[20px]">Alert Local Security!</h3>
                     <img class="w-4/4 md:w-auto" src="/assets/img/Frame 1.png" alt="">
                     <h1 class="text-[20px] sm:text-[24px] text-black text-center font-serif mt-[10px]">Press to send instant Alert!</h1>
@@ -45,7 +79,7 @@
 
         <!-- main area -->
 
-        <div class="w-10/12 place-content-center items-center border">
+        <div class="w-10/12 place-content-center items-center">
             <div class="flex flex-col place-content-center sm:my-[60px]">
                 <div class="eAreaheader">
                         <h1 class="text-center my-[20px] font-bold">Emergency numbers at your Fingertips</h1>

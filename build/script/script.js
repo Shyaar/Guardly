@@ -61,9 +61,8 @@
     phone2: phone2,
 };
 
-// Get existing data from localStorage
+// set data to local storage. avoid replacement
 let existingFD = JSON.parse(localStorage.getItem('fD')) || [];
-
 existingFD.push(fD);
 localStorage.setItem('fD', JSON.stringify(existingFD));
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="loginFrame w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
+        <div id="back" class="flex items-center text-gray-500 cursor-pointer mb-6">
+            <img src="/assets/svg_icons/mingcute_back-fill back.svg" alt="back icon" class="w-4 h-4 mr-2">
+            <span>Back</span>
+        </div>
+
+        <div id="loginInput" class="text-center mb-8">
+            <div class="mb-4">
+                <h3 class="font-bold text-xl">Login to your account</h3>
+                <p class="text-gray-600">Please enter your login credentials</p>
+            </div>
+            <div id="logo" class="text-center mb-6">
+                <img src="/assets/img/Frame 21.png" alt="logo" class="w-20 mx-auto">
+                <h3 class="text-center text-lg font-semibold">Guardly</h3>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="space-y-4">
+
+            <!-- Email Input -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input class="RegEmail px-4 py-2 w-full border-2 rounded-lg text-sm" type="email" id="email" placeholder="Enter your email">
+                <p class="emailError text-sm text-red-600 mt-1 hidden">Please enter a valid email.</p>
+            </div>
+
+            <!-- Password Input -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input class="RegPassword px-4 py-2 w-full border-2 rounded-lg text-sm" type="password" id="password" placeholder="Enter your password">
+                <p class="passwordError text-sm text-red-600 mt-1 hidden">Password cannot be empty.</p>
+            </div>
+
+            <!-- Forgot Password Link -->
+            <div class="text-right text-sm">
+                <a href="#" class="text-blue-500 hover:underline">Forgot password?</a>
+            </div>
+
+            <!-- Login Button -->
+            <div>
+                <button type="submit" class="loginBtn bg-[#B70612] text-white px-4 py-2 w-full text-sm rounded-lg mt-4">Login</button>
+            </div>
+
+        </form>
+
+        <!-- Sign Up Link -->
+        <div class="text-center mt-4 text-sm">
+            <span class="text-gray-600">Don't have an account? </span>
+            <a href="#" class="text-blue-500 hover:underline">Sign up</a>
+        </div>
+    </div>
+
+   
+
+</body>
+</html>
